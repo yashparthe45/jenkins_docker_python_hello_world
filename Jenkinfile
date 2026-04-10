@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKER_IAMGE = 'hello-world-python:latest' // Docker image name
+		DOCKER_IMAGE = 'hello-world-python:latest'
 	}
 
 	stages {
