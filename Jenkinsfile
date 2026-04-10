@@ -16,9 +16,8 @@ pipeline {
 		stage('Docker Build') {
 			steps {
 				script {
-					if (fileExists('Dockerfile')) {
-						sh "docker build -t 
-						${env.DOCKER_IMAGE} ."
+					if (fileExists('Dockerfile')) {						
+                             	                sh "docker build -t ${env.DOCKER_IMAGE} ."
 					}else{
 						error "Dockerfile not found in the workspace. Please create one for your Python application."
 					}
